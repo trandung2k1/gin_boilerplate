@@ -71,9 +71,10 @@ func Run(r *gin.Engine) {
 	getRoutes(r)
 	s := fmt.Sprintf("Server listen on:http://localhost:%s", port)
 	fmt.Println(s)
-	r.Run(":4000")
+	r.Run(":" + os.Getenv("PORT"))
 }
 func getRoutes(r *gin.Engine) {
 	api := r.Group("/api")
 	UserRoutes(api)
+	TodoRoutes(api)
 }

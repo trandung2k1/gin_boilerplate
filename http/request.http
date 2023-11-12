@@ -1,0 +1,48 @@
+GET http://localhost:4000/api/todos
+
+
+###
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"Dung",
+    "email":"trandungksnb2001@gmail.com",
+    "password":"Trandung2001@"
+}
+
+
+
+###
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"trandungksnb00@gmail.com",
+    "password":"Trandung2001@"
+}
+
+
+
+###
+GET http://localhost:4000/api/auth/users/65504d8797dec34a7fff2096
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk3OTM5NTIsInVzZXJJZCI6IjY1NTA0ZDg3OTdkZWMzNGE3ZmZmMjA5NiJ9.QAZXXVmvrw4w2OhzeiE8LKWZ9LeEvWI748nFhUndz6o
+
+
+
+
+###
+POST http://localhost:4000/api/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk4MDY5MjcsInVzZXJJZCI6IjY1NTBmMDllNDUxYmZjZTQ0M2FlNDE1ZCJ9.KcifqlC6OBurXyN1v_GSg8iKwAZEqhTf4shpMhJlryk
+
+{
+    "title": "Hello world",
+    "description": "This is msg",
+    "isCompleted": true
+}
+
+
+###
+GET http://localhost:4000/api/todos/6550f0cd451bfce443ae415e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk4MTExOTAsInVzZXJJZCI6IjY1NTBmMDllNDUxYmZjZTQ0M2FlNDE1ZCJ9.Eijd8JE8qIRHNQTpKsu5uA0Jrz0CyLvKwToLEmkwwM4
